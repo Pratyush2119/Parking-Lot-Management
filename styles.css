@@ -1,0 +1,126 @@
+body {
+    background-color: rgb(217, 252, 252);
+}
+
+.jumbotron {
+    background-color:rgb(246, 198, 134);
+    height: 80px;
+    letter-spacing: 10px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    position:fixed;
+    width:100%;
+    top:0px;
+    box-shadow: 5px 10px 18px #b0afaf;
+}
+
+h2 {
+    text-align: left;
+}
+
+.parkicon {
+    height:60px;
+    width:60px;
+    margin-right: 75px;
+}
+
+.form-container {
+    margin-top: 140px;
+    border-radius: 5px;
+    padding: 30px;
+    width:800px;
+    font-size: larger;
+    background-color: beige;
+    box-shadow: 0px 0px 30px 0px #3d3d3d;
+}
+
+input[type=text], input[type=date] {
+    width:100%;
+}
+
+input[type=submit] {
+    height:40px;
+    width:200px;
+    margin-top: 10px;
+    border-radius: 50px;
+    outline: none;
+    border: 1px solid green;
+    background-color: green;
+    color: white;
+}
+
+input[type=submit]:hover {
+    background-color: rgb(41, 172, 41);
+    box-shadow: 0px 0px 20px 0px rgb(142, 141, 141);
+}
+
+.car-table {
+    margin-top: 70px;
+    border: 1px solid;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0px 0px 15px 0px rgb(142, 141, 141);
+    background-color: aliceblue;
+}
+
+.car-list {
+    width:100%;
+    font-size: large;
+}
+
+.car-list th,td {
+    border: 1px solid;
+}
+
+.car-list td {
+    background-color: aliceblue;
+}
+
+.deleteBtn {
+    outline: none;
+    border:1px solid;
+    background-color: rgb(244, 117, 117);
+    border-radius: 3px;
+}
+
+.deleteBtn:hover {
+    box-shadow: 0px 0px 10px 0px rgb(142, 141, 141);
+    background-color: rgb(246, 58, 58);
+}
+
+.footer {
+    background-color:antiquewhite;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    padding: 10px;
+    font-size: larger;
+}
+
+@media all and (max-width:768px) {
+    .jumbotron {
+        letter-spacing: normal;
+        font-size: 15px;
+        height:65px;
+    }
+    h2 {
+        text-align: center;
+    }
+    .form-container{
+        width: auto;
+        font-size: small;
+        margin-top: 110px;
+    }
+    .car-table {
+        width:auto;
+        margin-top: 50px;
+        margin-bottom: 150px;
+    }
+    .car-list {
+        font-size: small;
+    }
+    .footer {
+        font-size: small;
+    }
+}

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parking Lot Management</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="myscript.js"></script>
+    <link href="styles.css" rel="stylesheet">
+    
+</head>
+<body>
+    <div class="jumbotron">
+        <div class="container">
+            <div class="row row-header">
+                <div class="col-md-4 p-2 d-none d-md-block" align="right">
+                    <img class="parkicon" src="images/parking-img.jpg">
+                </div>
+                <div class="col-md-8 p-3">
+                    <h2>Parking Lot Management</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container form-container">
+        <div class="row pt-3">
+            <div class="col-12">
+                <div class="row mb-1">
+                    <div class="col-12">
+                        <label for="name">Name</label>
+                        <span style="color: red;">*</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <input type="text" name="name" id="name" placeholder="Enter Name" onkeyup="checkContent('name','nameError')" required autocomplete="off">
+                        <span id="nameError" style="color: red;font-size: smaller;visibility: hidden;">Please Enter Your Name.</span>
+                    </div>
+                </div>
+
+                <div class="row mb-1">
+                    <div class="col-12">
+                        <label for="vehname">Vehicle Name</label>
+                        <span style="color: red;">*</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <input type="text" name="vehname" id="vehname" placeholder="Enter Vehicle Name" onkeyup="checkContent('vehname','vehnameError')" required autocomplete="off">
+                        <span id="vehnameError" style="color: red;font-size: smaller;visibility: hidden;">Please Enter Vehicle Name.</span>
+                    </div>
+                </div>
+
+                <div class="row mb-1">
+                    <div class="col-12">
+                        <label for="vehnum">License Plate Number</label>
+                        <span style="color: red;">*</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <input type="text" name="vehnum" id="vehnum" placeholder="Number Format should be VW-17-LP-6718, TR-00-EW-7156, etc." onkeyup="checkContent('vehnum','vehnumError')"required autocomplete="off">
+                        <span id="vehnumError" style="color: red;font-size: smaller;visibility: hidden;">Please Enter License Plate Number.</span>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="row mb-1">
+                            <div class="col-12">
+                                <label for="endate">Entry Date</label>
+                                <span style="color: red;">*</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <input type="date" name="endate" id="endate" onkeyup="checkContent('endate','endateError')"required autocomplete="off">
+                                <span id="endateError" style="color: red;font-size: smaller;visibility: hidden;">Please Enter Valid Entry Date.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="row mb-1">
+                            <div class="col-12">
+                                <label for="exdate">Exit Date</label>
+                                <span style="color: red;">*</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <input type="date" name="exdate" id="exdate" onkeyup="checkContent('exdate','exdateError')"required autocomplete="off">
+                                <span id="exdateError" style="color: red;font-size: smaller;visibility: hidden;">Please Enter Valid Exit Date.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    
+                <div class="row">
+                    <div class="col-12 mb-3" align="center">
+                        <input type="submit" value="Register" onclick="submitHandler()">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container car-table">
+        <div class="row">
+            <div class="col-12" align="center">
+                <table class="car-list" id="car-list">
+                    <thead style="background-color: rgb(49, 148, 247);text-align: center;">
+                        <th style="padding: 10px;">Name</th>
+                        <th>Vehicle Name</th>
+                        <th>License Plate Number</th>
+                        <th>Entry Date</th>
+                        <th>Exit Date</th>
+                        <th>Remove</th>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <div class="container">
+            <div class="row" align="center">
+                <div class="col-12">
+                    <span class="myname">Designed And Developed By -</span>
+                    <br>
+                    <span>Akshay Upadhayay, Dibyashree Nanda, Manjusha S N, Pratyush Panda, Puneeth Reddy and Sumanthreddy Pagala</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+</body>
+</html>

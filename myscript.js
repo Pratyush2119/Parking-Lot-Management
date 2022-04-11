@@ -13,7 +13,13 @@ function submitHandler() {
                 var data={"name": name,"vehname":vehname,"vehnum":vehnum,"endate":tendate,"exdate":texdate};
                 var key=String(Math.floor((Math.random()*100000)+1));
                 window.localStorage.setItem(key,JSON.stringify(data));
-    
+                
+                document.getElementById("name").value='';
+                document.getElementById("vehname").value='';
+                document.getElementById("vehnum").value='';
+                document.getElementById("endate").value='';
+                document.getElementById("exdate").value='';
+
                 var storage = allStorage();
                 var values = storage.values;
                 var keys = storage.keys;

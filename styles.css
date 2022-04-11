@@ -55,6 +55,7 @@ input[type=submit]:hover {
 
 .car-table {
     margin-top: 70px;
+    margin-bottom: 150px;
     border: 1px solid;
     border-radius: 5px;
     padding: 10px;
